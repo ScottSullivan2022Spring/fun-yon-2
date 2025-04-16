@@ -1,0 +1,156 @@
+
+/* Base Styles - Mobile First */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #375e90;
+    text-align: center;
+   }
+   header {
+    background-color: #436e9f;
+    color: rgb(72, 101, 182);
+    padding: 5px;
+    position: center;
+    text-align: center;
+    z-index: 10;
+   }
+   .menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+   }
+   nav {
+    display: none;
+    background: #4772a3;
+    position: center;
+    left: 0;
+    top: 80px;
+    width: 100%;
+    z-index: 9;
+   }
+   .menu li {
+    padding: 10px;
+    border-bottom: 1px solid #1900ff;
+    text-align: center;
+   }
+   .menu li a {
+    text-decoration: none;
+    color: rgb(80, 85, 187);
+    display: block;
+    padding: 10px;
+   }
+   #menu-check {
+    display: none;
+   }
+   #menu-check:checked ~ nav {
+    display: block;
+   }
+   .menu-icon {
+    position: static;
+    top: 10px;
+    left: 20px;
+    font-size: 2em;
+    cursor: pointer;
+   }
+   .container {
+    color: #64c0fe;
+    width: 75%;
+    margin: center;
+    padding-top: 5%;
+   }
+   .intro {
+    padding: 5%;
+    background: rgb(53, 94, 175);
+    margin: 10px 0;
+    border-radius: 5px;
+   }
+   .card {
+    background: rgb(0, 123, 255);
+    padding: 5px;
+    margin: 5% 0;
+    border-radius: 5px;
+    box-shadow: 5px 5px 10px rgba(251, 251, 252, 0.5);
+   }
+   .card img {
+    background-color: #375e90;
+    width: 100%;
+    border-radius: 5px;
+   }
+   
+
+    /* Cell View */
+    @media screen and (min-width: 500px) {
+        #menu-check, .menu-icon {
+        display: none;
+        }
+        nav {
+            display: block;
+            position: static;
+            background: #93a2ae;
+            text-align: center;
+            padding: 2px 0;
+        }
+        .menu {
+            display: inline-block;
+        }   
+        .menu li {
+            display: inline-block;
+            padding: 10px 15px;
+            border-bottom: none;
+            }
+        }
+      /* Tablet View */
+      @media screen and (min-width: 768px) {
+        #menu-check, .menu-icon {
+        display: none;
+        }
+        nav {
+            display: block;
+            position: static;
+            background: #717194;
+            text-align: center;
+            padding: 2px 0;
+        }
+        .menu {
+            display: inline-block;
+        }   
+        .menu li {
+            display: inline-block;
+            padding: 10px 15px;
+            border-bottom: none;
+            }
+        }
+        
+    /* Desktop View - Sidebar Nav */
+    @media screen and (min-width: 1024px){
+    #menu-check, .menu-icon {
+    text-align: left;
+    }
+    nav {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 250px;
+    height: 100%;
+    background: #64c0fe;
+    padding-top: 20px;
+    }
+    .menu {
+        padding-left: 0;
+        }
+        .menu li {
+        display: block;
+        padding: 20px;
+        }
+        .container {
+        margin-left: 260px;
+        width: calc(98% - 260px);
+        }
+        header {
+        margin-left: 260px;
+        text-align: left;
+        }
+
+
+    }
